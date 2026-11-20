@@ -16,6 +16,7 @@ h1{font-size:20px;margin:0}.sub{font-size:13px;color:var(--muted)}.season{backgr
 table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:10px 7px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600;font-size:11px}tr.mine{background:#eef4f8;font-weight:750}
 .actions{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.btn{border:0;background:var(--navy);color:white;padding:11px 14px;border-radius:10px;font-weight:700;cursor:pointer}.btn.secondary{background:white;color:var(--navy);border:1px solid var(--line)}
 .navbtn{display:inline-flex;align-items:center;gap:5px;margin-top:8px;padding:7px 10px;border:1px solid #cbd8e1;border-radius:8px;background:#fff;color:var(--navy);font-size:12px;font-weight:700;text-decoration:none}
+.empty{color:var(--muted);font-size:13px}.form{display:flex;gap:4px}.form span{width:22px;height:22px;border-radius:6px;display:grid;place-items:center;font-size:11px;font-weight:800;color:#fff}.form .W{background:var(--green)}.form .V{background:var(--red)}.seg{display:inline-flex;background:#e9eef2;border-radius:9px;padding:3px;margin-bottom:6px}.seg button{border:0;background:transparent;padding:6px 10px;border-radius:7px;font-weight:650;color:#52616d;cursor:pointer;font-size:12px}.seg button.active{background:#fff;color:var(--navy)}
 .note{font-size:12px;color:var(--muted);margin-top:18px}.hidden{display:none}
 .probbar{height:12px;background:#e8edf1;border-radius:20px;overflow:hidden;display:flex;margin:10px 0}.prob-roveka{background:#18794e;width:50%}.prob-fit{background:#b9c8d2;width:50%}.chart{display:flex;align-items:end;gap:14px;height:150px;padding:12px 10px 4px;border-bottom:1px solid var(--line)}.bar-group{flex:1;display:flex;align-items:end;justify-content:center;gap:5px;height:100%;position:relative}.bar{width:24px;border-radius:6px 6px 0 0;min-height:4px}.bar.roveka{background:#18794e}.bar.fit{background:#8aa3b5}.chart-label{font-size:11px;color:var(--muted);text-align:center;margin-top:7px}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
 @media(max-width:520px){.wrap{padding:14px 12px 36px}.hero{padding:18px}.hero h2{font-size:22px}.match{grid-template-columns:62px 1fr auto;gap:8px}.score{font-size:18px}.tabs button{font-size:12px;padding:9px 5px}.hide-mobile{display:none}}
@@ -24,12 +25,12 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><div class="logo">🏐</div><div><h1>VolleyTracker</h1><div class="sub">Roveka Stevoort C · Promo 4 Dames D</div></div></div>
-    <div class="season">Update · 19 nov 2026</div>
+    <div class="brand"><div class="logo">🏐</div><div><h1>VolleyTracker</h1><div class="sub"><span class="myTeam"></span> · Promo 4 Dames D</div></div></div>
+    <div class="season" id="updated">Laden…</div>
   </header>
   <section class="hero">
-    <div class="eyebrow">MIJN PLOEG</div><h2>Roveka Stevoort C</h2><div>Promo 4 Dames D · Limburg</div>
-    <div class="stats"><div class="stat"><strong>12</strong><span>Punten</span></div><div class="stat"><strong>4</strong><span>Overwinningen</span></div><div class="stat"><strong>6</strong><span>Gespeeld</span></div></div>
+    <div class="eyebrow">MIJN PLOEG</div><h2 class="myTeam"></h2><div id="heroSub">Promo 4 Dames D · Limburg</div>
+    <div class="stats"><div class="stat"><strong id="stPts">–</strong><span>Punten</span></div><div class="stat"><strong id="stWins">–</strong><span>Overwinningen</span></div><div class="stat"><strong id="stPlayed">–</strong><span>Gespeeld</span></div></div>
   </section>
   <div class="actions">
     <button class="btn" onclick="downloadICS()">↓ Download agenda (.ics)</button>
@@ -39,110 +40,130 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;p
     <button class="active" data-tab="matches">Wedstrijden</button><button data-tab="results">Resultaten</button><button data-tab="ranking">Klassement</button><button data-tab="analysis">Analyse</button>
   </nav>
   <main id="matches">
-    <div class="card next">
-      <div class="eyebrow" style="color:#526c7c">EERSTVOLGENDE WEDSTRIJD</div>
-      <div class="row" style="margin:8px 0"><div><div style="font-size:22px;font-weight:800">21 november 2026</div><div class="small">Zaterdag · 18:30</div></div><span class="tag" style="background:#fff;color:#18794e">Thuiswedstrijd</span></div>
-      <div class="row"><strong>Roveka Stevoort C</strong><strong>VS</strong><strong>Dievoc Diepenbeek E</strong></div>
-      <div class="venue">Sporthal Spalbeek</div>
-      <a class="navbtn" href="https://www.google.com/maps/search/?api=1&query=Sporthal%20Spalbeek" target="_blank" rel="noopener">↗ Navigeer naar sporthal</a>
-    </div>
+    <div id="nextCard"></div>
     <h3>Alle resterende wedstrijden</h3>
     <div id="fixtureList"></div>
   </main>
-  <main id="results" class="hidden"><h3>Gespeelde wedstrijden</h3><div id="resultList"></div></main>
-  <main id="ranking" class="hidden"><h3>Promo 4 Dames D · laatste beschikbare stand</h3>
-    <div class="card" style="overflow-x:auto"><table><thead><tr><th>#</th><th>Ploeg</th><th>Ptn</th><th>Wed.</th><th>Sets</th></tr></thead><tbody id="rankingRows"></tbody></table></div>
+  <main id="results" class="hidden">
+    <div class="seg"><button class="active" data-scope="mine">Mijn ploeg</button><button data-scope="all">Hele reeks</button></div>
+    <div id="resultList"></div>
   </main>
-  <main id="analysis" class="hidden">
-    <h3>Analyse na speeldag 6 · update 19 november 2026</h3>
-    <div class="card">
-      <div class="eyebrow" style="color:#526c7c">LAATSTE WEDSTRIJD</div>
-      <h2 style="font-size:21px;margin:7px 0">Fit V.B.C. Ham A – Roveka Stevoort C</h2>
-      <div class="row"><strong class="score">0–3</strong><span class="tag win">Overtuigende uitzege</span></div>
-      <p>Roveka haalde op verplaatsing drie belangrijke punten. De setstanden (23–25, 22–25 en 16–25) tonen dat de eerste twee sets relatief dicht bij elkaar lagen, maar dat Roveka in de derde set duidelijk afstand nam. De ploeg maakte de wedstrijd in drie sets af.</p>
-      <div class="row"><span>Competitiestand Roveka</span><strong>12 punten · 6 wedstrijden</strong></div>
-      <div class="row"><span>Resultaten</span><strong>4 zeges · 2 nederlagen</strong></div>
-      <div class="row"><span>Setbalans</span><strong>14 gewonnen · 9 verloren</strong></div>
-    </div>
-    <div class="card">
-      <div class="eyebrow" style="color:#526c7c">VOLGENDE TEGENSTANDER</div>
-      <h2 style="font-size:21px;margin:7px 0">Roveka Stevoort C – Dievoc Diepenbeek E</h2>
-      <p class="small">Zaterdag 21 november 2026 · 18:30 · Sporthal Spalbeek</p>
-      <p>Dievoc verloor op 15 november thuis met 0–3 van Tamera Lummen D (18–25, 12–25 en 8–25). Vooral in de derde set had Dievoc het moeilijk. Dat is een duidelijk signaal, maar één wedstrijd is onvoldoende om hun volledige niveau te beoordelen.</p>
-      <div class="row"><strong>Indicatieve inschatting</strong><span class="tag" style="background:#fff3d6;color:#785600">Beperkte betrouwbaarheid</span></div>
-      <div class="probbar"><div class="prob-roveka" style="width:60%"></div><div class="prob-fit" style="width:40%"></div></div>
-      <div class="row"><strong>Roveka: licht favoriet</strong><strong>60% / 40%</strong></div>
-      <p class="small">Ruwe inschatting op basis van de zes wedstrijden van Roveka, de recente 0–3 van Dievoc en eerdere resultaten tegen gemeenschappelijke tegenstanders. Geen gevalideerd voorspellingsmodel.</p>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">Vergelijking via gemeenschappelijke tegenstander</h3>
-      <p>Beide ploegen speelden tegen KVC Davozon Zonhoven C:</p>
-      <ul>
-        <li><strong>Roveka:</strong> won met 3–0 (25–19, 25–11, 25–17).</li>
-        <li><strong>Dievoc:</strong> won met 3–1 (18–25, 25–22, 25–20, 25–21).</li>
-      </ul>
-      <p>Roveka won overtuigender tegen Davozon, terwijl Dievoc wel een set verloor. Dat is een positief vergelijkingspunt voor Roveka, maar geen sluitend bewijs.</p>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0">Wat moet Roveka meenemen?</h3>
-      <ul>
-        <li>De 3–0 tegen Fit Ham bevestigt dat Roveka ook buitenshuis in drie sets kan winnen.</li>
-        <li>De eerste twee sets tegen Ham waren nipt: scherp blijven op opslag en receptie is belangrijk.</li>
-        <li>Dievoc komt uit een duidelijke 0–3-nederlaag tegen Tamera, maar won eerder wel met 3–1 van Davozon.</li>
-        <li>Roveka heeft thuis de kans om de recente overwinning door te trekken.</li>
-      </ul>
-      <p><strong>Conclusie:</strong> Roveka mag deze wedstrijd met vertrouwen aanvangen en moet zelf het initiatief nemen. Een overwinning is realistisch, maar onderschatting is het grootste risico.</p>
-    </div>
+  <main id="ranking" class="hidden"><h3>Promo 4 Dames D · stand volgens volleyscores.be</h3>
+    <div class="card" style="overflow-x:auto"><table><thead><tr><th>#</th><th>Ploeg</th><th>Ptn</th><th>Wed.</th><th>Sets</th><th class="hide-mobile">Vorm</th></tr></thead><tbody id="rankingRows"></tbody></table></div>
   </main>
-  <p class="note">* Het klassement is de laatst eerder beschikbare volledige momentopname en is nog niet volledig herberekend na alle wedstrijden van 14 en 15 november. De wedstrijdresultaten en analyse zijn wel bijgewerkt met de bevestigde uitslagen van Roveka en Dievoc. De winstinschatting is indicatief, niet statistisch gevalideerd. Deze HTML-versie haalt nog geen automatische live updates op bij Volleyscores.be.</p>
+  <main id="analysis" class="hidden"><div id="analysisBox"></div></main>
+  <p class="note">Ranking en uitslagen worden elke zondagavond automatisch opgehaald van volleyscores.be. De analyse en winstinschatting worden daaruit berekend; ze zijn indicatief en geen gevalideerd model.</p>
   <p class="note">Bron: <a href="https://www.volleyscores.be/" target="_blank" rel="noopener">Volleyscores.be</a></p>
 </div>
 <script>
-const fixtures=[
-["2026-11-21","18:30","Roveka Stevoort C","Dievoc Diepenbeek E","Sporthal Spalbeek"],
-["2026-11-29","12:00","Stalvoc Allimex Beverlo F","Roveka Stevoort C","Sporthal Stalvoc, Koersel"],
-["2026-12-05","16:00","Roveka Stevoort C","KVC Lensonline Genk E","Sporthal Spalbeek"],
-["2027-01-10","16:30","Roveka Stevoort C","Kivola Riemst D","Sporthal Spalbeek"],
-["2027-01-16","16:00","KVC Lensonline Genk E","Roveka Stevoort C","Sporthal KVC LensOnline Genk"],
-["2027-01-30","18:30","Roveka Stevoort C","Fit V.B.C. Ham A","Sporthal Spalbeek"],
-["2027-02-06","17:00","KVC Davozon Zonhoven C","Roveka Stevoort C","Sporthal Ter Donk, Zonhoven"],
-["2027-02-21","18:30","Roveka Stevoort C","Tamera Lummen D","Sporthal Spalbeek"],
-["2027-03-07","18:30","Dievoc Diepenbeek E","Roveka Stevoort C","Sporthal Demerstrand (nieuwe hal), Diepenbeek"],
-["2027-03-13","10:00","Tesvoc Tessenderlo A","Roveka Stevoort C","Sporthal De Voordijcker, Tessenderlo-Ham"],
-["2027-03-20","20:00","Kovok Kortessem C","Roveka Stevoort C","Sporthal De Weyer, Kortessem"],
-["2027-04-17","14:00","Roveka Stevoort C","Stalvoc Allimex Beverlo F","Sporthal Spalbeek"]
-];
-const results=[
-["14 nov 2026","Fit V.B.C. Ham A","Roveka Stevoort C","0–3","23–25, 22–25, 16–25",true,"Sterke uitzege. De eerste twee sets waren spannend, maar Roveka nam in set drie duidelijk afstand."],
-["12 sep 2026","Roveka Stevoort C","KVC Davozon Zonhoven C","3–0","25–19, 25–11, 25–17",true,"Sterke competitiestart: Roveka won overtuigend in drie sets en hield de tegenstander telkens onder 20 punten."],
-["20 sep 2026","Roveka Stevoort C","Tesvoc Tessenderlo A","3–2","20–25, 25–15, 25–12, 26–28, 15–10",true,"Roveka herstelde zich na de verloren openingsset, maar had een spannende vijfsetter nodig. Sterke reactie in de beslissende set."],
-["26 sep 2026","Roveka Stevoort C","Kovok Kortessem C","3–1","25–23, 25–11, 18–25, 25–12",true,"Na twee gewonnen sets volgde een dip in set drie. Roveka herpakte zich overtuigend met 25–12 in set vier."],
-["18 okt 2026","Tamera Lummen D","Roveka Stevoort C","3–2","24–26, 26–24, 25–21, 24–26, 15–7",false,"Roveka dwong een vijfde set af en won twee sets nipt, maar verloor de beslissende set met 15–7. Dat wijst op een zware slotfase."],
-["25 okt 2026","Kivola Riemst D","Roveka Stevoort C","3–0","25–12, 25–17, 25–15",false,"Kivola had duidelijk de bovenhand. Roveka kwam in geen enkele set boven 17 punten uit; dit was de moeilijkste wedstrijd tot dan toe."]
-];
-const ranking=[
-["1","Stalvoc Allimex Beverlo F",14,5,"15–4"],["2","Tesvoc Tessenderlo A",12,6,"15–9"],
-["3a","Tamera Lummen D",9,4,"11–6"],["3b","Roveka Stevoort C",9,5,"11–9",true],
-["3c","Kivola Riemst D",9,6,"12–11"],["3d","Fit V.B.C. Ham A",9,6,"9–10"],
-["7a","Kovok Kortessem C",6,5,"10–11"],["7b","Dievoc Diepenbeek E",6,5,"8–12"],
-["9","KVC Davozon Zonhoven C",3,5,"4–13"],["10","KVC Lensonline Genk E",1,5,"5–15"]
-];
+const MY="Roveka Stevoort C";
+// Handgeschreven commentaar bij gespeelde matchen (sleutel: datum|thuis|uit)
+const NOTES={
+"2026-11-14|Fit V.B.C. Ham A|Roveka Stevoort C":"Sterke uitzege. De eerste twee sets waren spannend, maar Roveka nam in set drie duidelijk afstand.",
+"2026-09-12|Roveka Stevoort C|KVC Davozon Zonhoven C":"Sterke competitiestart: Roveka won overtuigend in drie sets en hield de tegenstander telkens onder 20 punten.",
+"2026-09-20|Roveka Stevoort C|Tesvoc Tessenderlo A":"Roveka herstelde zich na de verloren openingsset, maar had een spannende vijfsetter nodig. Sterke reactie in de beslissende set.",
+"2026-09-26|Roveka Stevoort C|Kovok Kortessem C":"Na twee gewonnen sets volgde een dip in set drie. Roveka herpakte zich overtuigend met 25–12 in set vier.",
+"2026-10-18|Tamera Lummen D|Roveka Stevoort C":"Roveka dwong een vijfde set af en won twee sets nipt, maar verloor de beslissende set met 15–7. Dat wijst op een zware slotfase.",
+"2026-10-25|Kivola Riemst D|Roveka Stevoort C":"Kivola had duidelijk de bovenhand. Roveka kwam in geen enkele set boven 17 punten uit; dit was de moeilijkste wedstrijd tot dan toe."
+};
+let D=null, scope="mine";
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fmtDate=s=>new Date(s+"T12:00:00").toLocaleDateString("nl-BE",{day:"numeric",month:"short"});
-document.getElementById("fixtureList").innerHTML=fixtures.map((f,i)=>`<div class="card match"><div class="date">${fmtDate(f[0])}<span>${f[1]}</span></div><div><div class="teams">${f[2]}<br><span class="small">vs</span> ${f[3]}</div><div class="venue">${f[4]}</div><a class="navbtn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(f[4])}" target="_blank" rel="noopener">↗ Navigeer naar sporthal</a></div><div class="small">${i+1}/${fixtures.length}</div></div>`).join("");
-document.getElementById("resultList").innerHTML=results.map(r=>`<div class="card"><div class="row"><span class="small">${r[0]}</span><span class="tag ${r[5]?'win':'loss'}">${r[5]?'Gewonnen':'Verloren'}</span></div><div style="font-weight:700;margin:7px 0">${r[1]} – ${r[2]}</div><div class="score">${r[3]}</div><div class="small">Setstanden (thuisploeg – bezoekers): ${r[4]}</div><p class="small" style="margin-bottom:0">${r[6]}</p></div>`).join("");
-document.getElementById("rankingRows").innerHTML=ranking.map(r=>`<tr class="${r[5]?'mine':''}"><td>${r[0]}</td><td>${r[1]}${r[5]?' · Mijn ploeg':''}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join("");
-document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));b.classList.add("active");["matches","results","ranking","analysis"].forEach(id=>document.getElementById(id).classList.toggle("hidden",id!==b.dataset.tab));}));
+const fmtLong=s=>new Date(s+"T12:00:00").toLocaleDateString("nl-BE",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+const played=m=>m.thuisSets!==null;
+const has=(m,t)=>m.thuis===t||m.uit===t;
+const setsStr=m=>m.sets.map(s=>s.replace("/","–")).join(", ");
+const res=(m,t)=>{const mine=m.thuis===t?m.thuisSets:m.uitSets, opp=m.thuis===t?m.uitSets:m.thuisSets;return {won:mine>opp,mine,opp,pts:mine===3?(opp<=1?3:2):(mine===2?1:0)}};
+const maps=q=>`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+function autoNote(m,t){
+  const r=res(m,t), sets=m.sets.map(s=>s.split("/").map(Number)), opp=m.thuis===t?m.uit:m.thuis;
+  const close=sets.filter(s=>Math.abs(s[0]-s[1])<=3).length;
+  if(r.won&&r.opp===0) return `Overtuigende 3–0 tegen ${opp}${close?`, met ${close} nipte set${close>1?"s":""}`:""}.`;
+  if(r.won&&r.opp===1) return `Zege in vier sets tegen ${opp}: één set liet ${t.split(" ")[0]} liggen.`;
+  if(r.won) return `Zwaar bevochten vijfsetter tegen ${opp}, goed voor 2 punten.`;
+  if(r.mine===2) return `Nipte nederlaag in vijf sets tegen ${opp}; toch 1 punt gepakt.`;
+  return `Verlies tegen ${opp} (${r.mine}–${r.opp}).`;
+}
+function form(t,n=5){return D.matches.filter(m=>played(m)&&has(m,t)).slice(-n).map(m=>res(m,t).won?"W":"V")}
+function formHTML(t){return `<span class="form">${form(t).map(x=>`<span class="${x}">${x}</span>`).join("")}</span>`}
+function render(){
+  const R=D.ranking, M=D.matches, me=R.find(r=>r.ploeg===MY)||{};
+  document.querySelectorAll(".myTeam").forEach(e=>e.textContent=MY);
+  document.title=`VolleyTracker – ${MY}`;
+  $("updated").textContent="Update · "+new Date(D.gecontroleerd).toLocaleDateString("nl-BE",{day:"numeric",month:"short",year:"numeric"});
+  $("heroSub").textContent=`Promo 4 Dames D · Limburg · plaats ${me.pos??"–"}`;
+  $("stPts").textContent=me.ptn??"–"; $("stWins").textContent=(me.gew30??0)+(me.gew32??0); $("stPlayed").textContent=me.wed??"–";
+  const upcoming=M.filter(m=>!played(m)&&has(m,MY)), done=M.filter(m=>played(m)&&has(m,MY));
+  const nx=upcoming[0];
+  $("nextCard").innerHTML=nx?`<div class="card next"><div class="eyebrow" style="color:#526c7c">EERSTVOLGENDE WEDSTRIJD</div>
+    <div class="row" style="margin:8px 0"><div><div style="font-size:22px;font-weight:800">${new Date(nx.datum+"T12:00:00").toLocaleDateString("nl-BE",{day:"numeric",month:"long",year:"numeric"})}</div><div class="small" style="text-transform:capitalize">${new Date(nx.datum+"T12:00:00").toLocaleDateString("nl-BE",{weekday:"long"})} · ${nx.uur}</div></div><span class="tag" style="background:#fff;color:#18794e">${nx.thuis===MY?"Thuiswedstrijd":"Uitwedstrijd"}</span></div>
+    <div class="row"><strong>${esc(nx.thuis)}</strong><strong>VS</strong><strong>${esc(nx.uit)}</strong></div>
+    <div class="venue">${esc(nx.sporthal)}</div><a class="navbtn" href="${maps(nx.sporthal)}" target="_blank" rel="noopener">↗ Navigeer naar sporthal</a></div>`:`<div class="card empty">Geen wedstrijden meer gepland.</div>`;
+  $("fixtureList").innerHTML=upcoming.slice(1).map((f,i)=>`<div class="card match"><div class="date">${fmtDate(f.datum)}<span>${f.uur}</span></div><div><div class="teams">${esc(f.thuis)}<br><span class="small">vs</span> ${esc(f.uit)}</div><div class="venue">${esc(f.sporthal)}</div><a class="navbtn" href="${maps(f.sporthal)}" target="_blank" rel="noopener">↗ Navigeer naar sporthal</a></div><div class="small">${i+2}/${upcoming.length}</div></div>`).join("")||`<div class="empty">—</div>`;
+  renderResults();
+  $("rankingRows").innerHTML=R.map(r=>`<tr class="${r.ploeg===MY?'mine':''}"><td>${esc(r.pos)}</td><td>${esc(r.ploeg)}${r.ploeg===MY?' · Mijn ploeg':''}</td><td>${r.ptn}</td><td>${r.wed}</td><td>${r.setsW}–${r.setsV}</td><td class="hide-mobile">${formHTML(r.ploeg)}</td></tr>`).join("");
+  renderAnalysis(me,done,nx);
+}
+function renderResults(){
+  const list=D.matches.filter(m=>played(m)&&(scope==="all"||has(m,MY))).reverse();
+  $("resultList").innerHTML=list.map(m=>{
+    const mine=has(m,MY), r=mine?res(m,MY):null, key=`${m.datum}|${m.thuis}|${m.uit}`;
+    const note=mine?(NOTES[key]||autoNote(m,MY)):"";
+    return `<div class="card"><div class="row"><span class="small">${fmtDate(m.datum)} ${m.datum.slice(0,4)}</span>${mine?`<span class="tag ${r.won?'win':'loss'}">${r.won?'Gewonnen':'Verloren'}</span>`:""}</div><div style="font-weight:700;margin:7px 0">${esc(m.thuis)} – ${esc(m.uit)}</div><div class="score">${m.thuisSets}–${m.uitSets}</div><div class="small">Setstanden (thuisploeg – bezoekers): ${setsStr(m)}</div>${note?`<p class="small" style="margin-bottom:0">${esc(note)}</p>`:""}</div>`}).join("")||`<div class="empty">Nog geen uitslagen.</div>`;
+}
+function rating(t){const r=D.ranking.find(x=>x.ploeg===t);if(!r||!r.wed)return .5;const ppm=r.ptn/r.wed/3,sr=r.setsW/Math.max(1,r.setsW+r.setsV);return .5*ppm+.5*sr}
+function renderAnalysis(me,done,nx){
+  let h="";
+  const last=done[done.length-1];
+  if(last){const r=res(last,MY);h+=`<h3>Analyse na speeldag ${me.wed} · update ${new Date(D.gecontroleerd).toLocaleDateString("nl-BE",{day:"numeric",month:"long",year:"numeric"})}</h3>
+  <div class="card"><div class="eyebrow" style="color:#526c7c">LAATSTE WEDSTRIJD</div><h2 style="font-size:21px;margin:7px 0">${esc(last.thuis)} – ${esc(last.uit)}</h2>
+  <div class="row"><strong class="score">${last.thuisSets}–${last.uitSets}</strong><span class="tag ${r.won?'win':'loss'}">${r.won?'Gewonnen':'Verloren'} · ${r.pts} ptn</span></div>
+  <p>${esc(NOTES[`${last.datum}|${last.thuis}|${last.uit}`]||autoNote(last,MY))} Setstanden: ${setsStr(last)}.</p>
+  <div class="row"><span>Competitiestand</span><strong>plaats ${esc(me.pos)} · ${me.ptn} punten · ${me.wed} wedstrijden</strong></div>
+  <div class="row"><span>Resultaten</span><strong>${me.gew30+me.gew32} zeges · ${me.verl30+me.verl32} nederlagen</strong></div>
+  <div class="row"><span>Setbalans</span><strong>${me.setsW} gewonnen · ${me.setsV} verloren</strong></div>
+  <div class="row"><span>Vorm (laatste 5)</span>${formHTML(MY)}</div></div>`}
+  if(nx){
+    const opp=nx.thuis===MY?nx.uit:nx.thuis, o=D.ranking.find(x=>x.ploeg===opp)||{};
+    const oppDone=D.matches.filter(m=>played(m)&&has(m,opp));
+    const oLast=oppDone[oppDone.length-1];
+    let p=rating(MY)/(rating(MY)+rating(opp)||1); p+= nx.thuis===MY?.03:-.03; p=Math.min(.85,Math.max(.15,p));
+    const pct=Math.round(p*100), label=pct>=58?"favoriet":pct>=52?"licht favoriet":pct>48?"evenwaardig":pct>42?"licht underdog":"underdog";
+    h+=`<div class="card"><div class="eyebrow" style="color:#526c7c">VOLGENDE TEGENSTANDER</div><h2 style="font-size:21px;margin:7px 0">${esc(nx.thuis)} – ${esc(nx.uit)}</h2>
+    <p class="small">${fmtLong(nx.datum)} · ${nx.uur} · ${esc(nx.sporthal)}</p>
+    <div class="row"><span>${esc(opp)}</span><strong>plaats ${esc(o.pos??"–")} · ${o.ptn??"–"} ptn · sets ${o.setsW??"–"}–${o.setsV??"–"}</strong></div>
+    <div class="row"><span>Vorm tegenstander</span>${formHTML(opp)}</div>
+    ${oLast?`<p>Laatste match van ${esc(opp)}: ${esc(oLast.thuis)} – ${esc(oLast.uit)} ${oLast.thuisSets}–${oLast.uitSets} (${setsStr(oLast)}).</p>`:""}
+    <div class="row"><strong>Indicatieve inschatting</strong><span class="tag" style="background:#fff3d6;color:#785600">Beperkte betrouwbaarheid</span></div>
+    <div class="probbar"><div class="prob-roveka" style="width:${pct}%"></div><div class="prob-fit" style="width:${100-pct}%"></div></div>
+    <div class="row"><strong>${MY.split(" ")[0]}: ${label}</strong><strong>${pct}% / ${100-pct}%</strong></div>
+    <p class="small">Berekend uit punten per wedstrijd en setverhouding van beide ploegen, met een klein thuisvoordeel. Geen gevalideerd voorspellingsmodel.</p></div>`;
+    const commons=[...new Set(D.matches.filter(m=>played(m)&&has(m,MY)).map(m=>m.thuis===MY?m.uit:m.thuis))].filter(c=>c!==opp&&D.matches.some(m=>played(m)&&has(m,opp)&&has(m,c)));
+    if(commons.length){
+      const line=(t,c)=>D.matches.filter(m=>played(m)&&has(m,t)&&has(m,c)).map(m=>{const r=res(m,t);return `${r.won?"won":"verloor"} ${r.mine}–${r.opp}`}).join(", ");
+      let a=0,b=0; commons.forEach(c=>D.matches.filter(m=>played(m)&&has(m,c)).forEach(m=>{if(has(m,MY))a+=res(m,MY).pts;if(has(m,opp))b+=res(m,opp).pts}));
+      h+=`<div class="card"><h3 style="margin-top:0">Vergelijking via gemeenschappelijke tegenstanders</h3><ul>${commons.map(c=>`<li><strong>${esc(c)}:</strong> ${MY.split(" ")[0]} ${line(MY,c)} · ${esc(opp.split(" ")[0])} ${line(opp,c)}</li>`).join("")}</ul>
+      <p>Punten tegen deze ploegen: <strong>${MY.split(" ")[0]} ${a}</strong> tegenover <strong>${esc(opp.split(" ")[0])} ${b}</strong>. ${a>b?"Een positief vergelijkingspunt, maar geen sluitend bewijs.":a<b?"Hier deed de tegenstander het beter; extra scherpte nodig.":"Gelijkwaardig op dit vlak."}</p></div>`;
+    }
+  }
+  $("analysisBox").innerHTML=h||`<div class="empty">Nog geen gegevens voor een analyse.</div>`;
+}
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));b.classList.add("active");["matches","results","ranking","analysis"].forEach(id=>$(id).classList.toggle("hidden",id!==b.dataset.tab));}));
+document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".seg button").forEach(x=>x.classList.remove("active"));b.classList.add("active");scope=b.dataset.scope;renderResults();}));
+fetch("data.json?v="+Date.now()).then(r=>r.json()).then(d=>{D=d;render();}).catch(()=>{$("updated").textContent="Data niet geladen";});
 function downloadICS(){
- const esc=s=>s.replace(/\\/g,"\\\\").replace(/,/g,"\\,").replace(/;/g,"\\;").replace(/\n/g,"\\n");
- const stamp=d=>d.replaceAll("-","")+"T";
- const events=fixtures.map((f,i)=>{
-  const start=f[0].replaceAll("-","")+"T"+f[1].replace(":","")+"00";
-  const [y,m,day]=f[0].split("-").map(Number);const [hh,mm]=f[1].split(":").map(Number);
-  const endDate=new Date(y,m-1,day,hh+2,mm);
-  const end=`${endDate.getFullYear()}${String(endDate.getMonth()+1).padStart(2,"0")}${String(endDate.getDate()).padStart(2,"0")}T${String(endDate.getHours()).padStart(2,"0")}${String(endDate.getMinutes()).padStart(2,"0")}00`;
-  return `BEGIN:VEVENT\r\nUID:volleyscores-roveka-${i}@volleytracker\r\nDTSTAMP:20261109T220000Z\r\nDTSTART;TZID=Europe/Brussels:${start}\r\nDTEND;TZID=Europe/Brussels:${end}\r\nSUMMARY:${esc(f[2]+" – "+f[3])}\r\nLOCATION:${esc(f[4])}\r\nDESCRIPTION:Promo 4 Dames D · Wedstrijdgegevens overgenomen uit de aangeleverde planning.\r\nEND:VEVENT`;
+ if(!D)return;
+ const e=s=>s.replace(/\\/g,"\\\\").replace(/,/g,"\\,").replace(/;/g,"\;").replace(/\n/g,"\\n");
+ const fx=D.matches.filter(m=>!played(m)&&has(m,MY));
+ const events=fx.map(f=>{
+  const start=f.datum.replaceAll("-","")+"T"+f.uur.replace(":","")+"00";
+  const [y,m,day]=f.datum.split("-").map(Number);const [hh,mm]=f.uur.split(":").map(Number);
+  const ed=new Date(y,m-1,day,hh+2,mm);const p=n=>String(n).padStart(2,"0");
+  const end=`${ed.getFullYear()}${p(ed.getMonth()+1)}${p(ed.getDate())}T${p(ed.getHours())}${p(ed.getMinutes())}00`;
+  return `BEGIN:VEVENT\r\nUID:${f.nr}@volleytracker\r\nDTSTAMP:${new Date().toISOString().replace(/[-:]/g,"").slice(0,15)}Z\r\nDTSTART;TZID=Europe/Brussels:${start}\r\nDTEND;TZID=Europe/Brussels:${end}\r\nSUMMARY:${e(f.thuis+" – "+f.uit)}\r\nLOCATION:${e(f.sporthal)}\r\nDESCRIPTION:Promo 4 Dames D · ${f.nr} · bron volleyscores.be\r\nEND:VEVENT`;
  }).join("\r\n");
- const ics=`BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//VolleyTracker//Roveka Stevoort C//NL\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\n${events}\r\nEND:VCALENDAR`;
+ const ics=`BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//VolleyTracker//${MY}//NL\r\nCALSCALE:GREGORIAN\r\nMETHOD:PUBLISH\r\n${events}\r\nEND:VCALENDAR`;
  const blob=new Blob([ics],{type:"text/calendar;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="Roveka-Stevoort-C-2026-2027.ics";a.click();URL.revokeObjectURL(url);
 }
 </script>
