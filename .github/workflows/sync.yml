@@ -1,0 +1,25 @@
+name: Wekelijkse sync volleyscores
+on:
+  schedule:
+    - cron: '0 21 * * 0'   # zondag 21:00 UTC = 22:00 Belgische wintertijd / 23:00 zomertijd
+  workflow_dispatch:
+  push:
+    paths: ['scripts/sync.mjs', '.github/workflows/sync.yml']
+permissions:
+  contents: write
+concurrency: { group: sync, cancel-in-progress: false }
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: npm i --no-save playwright@1 && npx playwright install --with-deps chromium
+      - run: node scripts/sync.mjs
+      - name: Commit als er iets veranderde
+        run: |
+          git config user.name "volleytracker-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet && echo "Geen wijzigingen" || (git commit -m "Sync volleyscores $(date -u +%F)" && git pull --rebase -q && git push)
