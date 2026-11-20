@@ -1,0 +1,37 @@
+[
+ {
+  "t": "document",
+  "method": "GET",
+  "url": "https://www.volleyscores.be/",
+  "post": null,
+  "status": 200,
+  "body": "    <!DOCTYPE html>\n    <html lang=\"en\">\n\n    \n<head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\"/>\n        <title>volleyscores.be</title>\n\n        <script src=\"https://www.volleyscores.be/js/jquery-1.11.3.min.js\"></script>\n        <script src=\"https://www.volleyscores.be/js/jquery.autocomplete.min.js\"></script>\n        <link rel=\"stylesheet\" href=\"https://www.volleyscores.be/bootstrap-3.3.6/css/bootstrap.min.css\" type=\"text/css\"/>\n        <!--        <script src=\"https://www.volleyscores.be/bootstrap-3.3.6/js/bootstrap.min.js\"></script>-->\n\n        <link rel=\"stylesheet\" href=\"https://www.volleyscores.be/font-awesome-4.6.3/css/font-awesome.min.css\"\n              type=\"text/css\"/>\n        <link rel=\"stylesheet\" href=\"https://www.volleyscores.be/css/volleyscore.css?20200313\"/>\n        <!--     <script src=\"https://www.volleyscores.be/js/jquery.tablesorter.min.js\"></script>-->\n        <link href=\"https://www.volleyscores.be/css/select2.css?20200313\" rel=\"stylesheet\"/>\n        <link href=\"https://www.volleyscores.be/css/select2-bootstrap.css?20200313\" rel=\"stylesheet\"/>\n        <script src=\"https://www.volleyscores.be/js/select2.js\"></script>\n\t\t\n\t\t<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/apple-touch-icon.png?v=2bBr2ywMNw\">\n\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/favicon-32x32.png?v=2bBr2ywMNw\">\n\t\t<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/favicon-16x16.png?v=2bBr2ywMNw\">\n\t\t<link rel=\"manifest\" href=\"/site.webmanifest?v=2bBr2ywMNw\">\n\t\t<link rel=\"mask-icon\" href=\"/safari-pinned-tab.svg?v=2bBr2ywMNw\" color=\"#cf0053\">\n\t\t<link rel=\"shortcut icon\" href=\"/favicon.ico?v=2bBr2ywMNw\">\n\t\t<meta name=\"apple-mobile-web-app-title\" content=\"Volleyscores\">\n\t\t<meta name=\"application-name\" content=\"Volleyscores\">\n\t\t<meta name=\"msapplication-TileColor\" content=\"#cf0053\">\n\t\t<meta name=\"theme-color\" content=\"#cf0053\">\n        \n\t\t    <script>\n        var locator = [];\n        var favorites = [];\n        var allowFavorites = false;\n\n\n        var URL = 'https://www.volleyscores.be/index.php?v=2';\n\n        function saveToObject() {\n            var hist = {};\n            $('.gts').each(function () {\n                hist[$(this).attr('data-gt')] = $(this).val();\n            });\n            return hist;\n        }\n\n        function loadFromObject(obj) {\n            for (var prop in obj) {\n                if (obj.hasOwnProperty(prop)) {\n                    $('.' + prop).val(obj[prop]);\n                    $('#' + prop).val(obj[prop]);\n                }\n            }\n        }\n\n        function storeCurrent() {\n            locator.unshift(saveToObject());\n        }\n\n        function loadPrevious() {\n            $('#goback').remove();\n            $('#refreshCurrent').remove();\n            var hist = locator.shift();\n            loadFromObject(hist);\n            $('.select2').each(function () {\n                $(this).select2();\n            });\n            gtData();\n        }\n\n        function TabberClick(href) {\n            href.parent().addClass(\"active\");\n            href.parent().siblings().removeClass(\"active\");\n            var tab = href.attr(\"href\");\n            href.closest('.tabber').find('.tab-pane').css(\"display\", \"none\");\n            href.closest('.tabber').find('.' + tab).show();\n        }\n        \n        (function (i, s, o, g, r, a, m) {\n            i['GoogleAnalyticsObject'] = r;\n            i[r] = i[r] || function () {\n                    (i[r].q = i[r].q || []).push(arguments)\n                }, i[r].l = 1 * new Date();\n            a = s.createElement(o),\n                m = s.getElementsByTagName(o)[0];\n            a.async = 1;\n            a.src = g;\n            m.parentNode.insertBefore(a, m)\n        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');\n\n        ga('create', 'UA-79276073-2', 'auto');\n        ga('send', 'pageview');\n\n        function getCookie(c_name) {\n  "
+ },
+ {
+  "t": "xhr",
+  "method": "POST",
+  "url": "https://www.google-analytics.com/j/collect?v=1&_v=j102&a=1361912664&t=pageview&_s=1&dl=https%3A%2F%2Fwww.volleyscores.be%2F&ul=en-us&dt=volleyscores.be&sr=1400x1000&vp=1400x1000&_u=IEBAAEABAAAAACAAI~&jid=884677342&gjid=280372042&cid=464222238.1795209959&tid=UA-79276073-2&_gid=2013545038.1795209959&_r=1&_slc=1&z=1188549258",
+  "post": null,
+  "status": 200,
+  "body": "2,cG-CVMMMBMR4M"
+ },
+ {
+  "t": "fetch",
+  "method": "POST",
+  "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-CVMMMBMR4M&gtm=45je6bh1v9125103770za20gxf1&_p=1795209959114&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=EBAI&cid=464222238.1795209959&frm=0&ir=1&ngs=1&pscdl=noapi&rcb=18&sr=1400x1000&uaa=x86&uab=64&uafvl=HeadlessChrome%3B159.0.8154.6%7CNot%252FA)Brand%3B8.0.0.0%7CChromium%3B159.0.8154.6&uam=&uamb=0&uap=Linux&uapv=&uaw=0&ul=en-us&_s=1&tag_exp=115938465~115938468~120213116~120385423~120469145~120469153~121246026~121246034&dl=https%3A%2F%2Fwww.volleyscores.be%2F&dt=volleyscores.be&sid=1795209959&sct=1&seg=0&en=page_view&_fv=1&_ss=1&_ee=1&tfd=1459",
+  "post": null,
+  "status": 204,
+  "body": ""
+ },
+ {
+  "step": "limburg",
+  "ok": true
+ },
+ {
+  "step": "reeks",
+  "err": "TimeoutError: locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByText('Promo 4 Dames D', { exact: true }).first()\n    - locator resolved to <li class=\"mnuLink\" onclick=\"loadPage('Reeks LDP4-D Promo 4 Dames D (L)','sd', '', '','12594', '', '', '','','%')\">Promo 4 Dames D</li>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 × waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+ },
+ {
+  "finalUrl": "https://www.volleyscores.be/"
+ }
+]
