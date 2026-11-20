@@ -28,20 +28,116 @@ Seizoenen
    Seizoen 2022/2023
    Seizoen 2021/2022
 www.volleyscores.be
-Welkom bij volleyscores.be.
-Enkele belangrijke volleybal- websites:
-VOLLEY BELGIUM
-TOPVOLLEY Belgium
-VOLLEY VLAANDEREN
-FVWB - FRBVB
-Belgium Beach
-Lotto Volley League
-ANTWERPEN
-WEST-VLAANDEREN
-LIMBURG
-OOST-VLAANDEREN
-VLAAMS-BRABANT
-BRV
-De Vriendschap
-VOBOG
+ VORIGE 
+Reeks Promo 4 Dames D (LDP4-D)
+RANGSCHIKKING
+Download .xls 
+ Promo 4 Dames D
+	Ploeg	Ptn	# Wed	Gew. 3-0/3-1	Gew. 3-2	Verl. 3-0/3-1	Verl. 3-2	Gew. sets	Verl. sets	Forfaits
+01.	Stalvoc Allimex Beverlo F	17	6	5	1	0	0	18	4	0
+02.	Tesvoc Tessenderlo A	15	7	4	1	1	1	18	9	0
+03a.	Tamera Lummen D	12	5	3	1	0	1	14	6	0
+03b.	Roveka Stevoort C	12	6	3	1	1	1	14	9	0
+05a.	Kivola Riemst D	9	7	2	1	3	1	13	14	0
+05b.	Fit V.B.C. Ham A	9	7	3	0	4	0	9	13	0
+07a.	Kovok Kortessem C	6	6	1	1	3	1	10	14	0
+07b.	Dievoc Diepenbeek E	6	6	1	1	3	1	8	15	0
+09.	KVC Lensonline Genk E	4	6	1	0	4	1	8	16	0
+10.	KVC Davozon Zonhoven C	3	6	1	0	5	0	4	16	0
+WEDSTRIJDEN
+Synchroniseren  Download .xls 
+
+
+ PROMO 4 DAMES D
+Nr	Dag	Datum	Uur	Thuis	Bezoekers	Sporthal	Uitslag	Sets
+LDP4-D-0009	Za	12/09/2026	20:30	Fit V.B.C. Ham A	Dievoc Diepenbeek E	Kwaadmechelen, Sporthal t Vlietje	3 - 0	25/15, 25/18, 25/7
+LDP4-D-0034	Za	12/09/2026	10:00	Tesvoc Tessenderlo A	Stalvoc Allimex Beverlo F	Tessenderlo-Ham, Sporthal De Voordijcker	1 - 3	25/17, 13/25, 16/25, 20/25
+LDP4-D-0040	Za	12/09/2026	18:30	Roveka Stevoort C	KVC Davozon Zonhoven C	Spalbeek, Sporthal Spalbeek	3 - 0	25/19, 25/11, 25/17
+LDP4-D-0007	Za	12/09/2026	09:30	Tamera Lummen D	KVC Lensonline Genk E	Lummen, Gem. sporthal De Vijfsprong	3 - 0	25/18, 25/21, 25/15
+LDP4-D-0041	Za	19/09/2026	17:00	KVC Davozon Zonhoven C	KVC Lensonline Genk E	Zonhoven, Sporthal Ter Donk	3 - 1	25/19, 12/25, 25/15, 25/17
+LDP4-D-0043	Zo	20/09/2026	11:00	Kivola Riemst D	Stalvoc Allimex Beverlo F	Riemst, Sporthal Op t Reeck	1 - 3	16/25, 14/25, 25/22, 16/25
+LDP4-D-0045	Zo	20/09/2026	18:30	Roveka Stevoort C	Tesvoc Tessenderlo A	Spalbeek, Sporthal Spalbeek	3 - 2	20/25, 25/15, 25/12, 26/28, 15/10
+LDP4-D-0044	Zo	20/09/2026	18:30	Dievoc Diepenbeek E	Kovok Kortessem C	Diepenbeek, Sporthal Demerstrand (nieuwe hal)	3 - 2	20/25, 17/25, 26/24, 25/23, 15/11
+LDP4-D-0016	Za	26/09/2026	10:00	Tesvoc Tessenderlo A	KVC Davozon Zonhoven C	Tessenderlo-Ham, Sporthal De Voordijcker	3 - 0	25/18, 25/22, 25/23
+LDP4-D-0039	Za	26/09/2026	18:00	Fit V.B.C. Ham A	KVC Lensonline Genk E	Kwaadmechelen, Sporthal t Vlietje	3 - 1	25/19, 25/20, 7/25, 25/18
+LDP4-D-0010	Za	26/09/2026	18:30	Roveka Stevoort C	Kovok Kortessem C	Spalbeek, Sporthal Spalbeek	3 - 1	25/23, 25/11, 18/25, 25/12
+LDP4-D-0002	Za	26/09/2026	15:00	Dievoc Diepenbeek E	Kivola Riemst D	Diepenbeek, Sporthal Demerstrand	2 - 3	11/25, 26/24, 16/25, 25/22, 5/15
+LDP4-D-0019	Za	26/09/2026	14:30	Tamera Lummen D	Stalvoc Allimex Beverlo F	Lummen, Gem. sporthal De Vijfsprong	2 - 3	25/23, 29/31, 25/16, 20/25, 8/15
+LDP4-D-0033	Za	03/10/2026	11:00	Kovok Kortessem C	Tamera Lummen D	Kortessem, Sporthal De Weyer oude Hal 1	1 - 3	18/25, 25/23, 17/25, 20/25
+LDP4-D-0056	Za	03/10/2026	16:00	Fit V.B.C. Ham A	Tesvoc Tessenderlo A	Kwaadmechelen, Sporthal t Vlietje	0 - 3	15/25, 17/25, 22/25
+LDP4-D-0006	Za	17/10/2026	10:00	Tesvoc Tessenderlo A	Kivola Riemst D	Tessenderlo-Ham, Sporthal De Voordijcker	3 - 2	23/25, 22/25, 25/9, 25/23, 15/12
+LDP4-D-0031	Za	17/10/2026	17:00	KVC Davozon Zonhoven C	Fit V.B.C. Ham A	Zonhoven, Sporthal Ter Donk	0 - 3	14/25, 16/25, 21/25
+LDP4-D-0027	Za	17/10/2026	17:30	KVC Lensonline Genk E	Kovok Kortessem C	Genk, Sporthal KVC LensOnline Genk	2 - 3	25/20, 25/13, 25/27, 11/25, 9/15
+LDP4-D-0030	Zo	18/10/2026	12:00	Stalvoc Allimex Beverlo F	Dievoc Diepenbeek E	Koersel, Sporthal Stalvoc	3 - 0	25/19, 25/12, 25/6
+LDP4-D-0015	Zo	18/10/2026	18:00	Tamera Lummen D	Roveka Stevoort C	Lummen, Gem. sporthal De Vijfsprong	3 - 2	24/26, 26/24, 25/21, 24/26, 15/7
+LDP4-D-0023	Za	24/10/2026	18:30	KVC Lensonline Genk E	Tesvoc Tessenderlo A	Genk, Sporthal KVC LensOnline Genk	1 - 3	22/25, 15/25, 27/25, 18/25
+LDP4-D-0003	Za	24/10/2026	18:00	Fit V.B.C. Ham A	Stalvoc Allimex Beverlo F	Kwaadmechelen, Sporthal t Vlietje	0 - 3	24/26, 23/25, 18/25
+LDP4-D-0018	Zo	25/10/2026	11:00	Kivola Riemst D	Roveka Stevoort C	Riemst, Sporthal Op t Reeck	3 - 0	25/12, 25/17, 25/15
+LDP4-D-0013	Zo	25/10/2026	18:30	Dievoc Diepenbeek E	KVC Davozon Zonhoven C	Diepenbeek, Sporthal Demerstrand (nieuwe hal)	3 - 1	18/25, 25/22, 25/20, 25/21
+LDP4-D-0011	Za	31/10/2026	18:30	Kovok Kortessem C	Kivola Riemst D	Kortessem, Sporthal De Weyer oude Hal 1	3 - 0	25/21, 25/19, 25/22
+LDP4-D-0021	Zo	08/11/2026	11:00	Kivola Riemst D	Fit V.B.C. Ham A	Riemst, Sporthal Op t Reeck	3 - 0	25/21, 25/11, 25/19
+LDP4-D-0001	Za	14/11/2026	10:00	Tesvoc Tessenderlo A	Kovok Kortessem C	Tessenderlo-Ham, Sporthal De Voordijcker	3 - 0	25/22, 25/22, 25/20
+LDP4-D-0029	Za	14/11/2026	18:00	Fit V.B.C. Ham A	Roveka Stevoort C	Kwaadmechelen, Sporthal t Vlietje	0 - 3	23/25, 22/25, 16/25
+LDP4-D-0008	Zo	15/11/2026	12:00	Stalvoc Allimex Beverlo F	KVC Davozon Zonhoven C	Koersel, Sporthal Stalvoc	3 - 0	25/12, 25/11, 25/11
+LDP4-D-0032	Zo	15/11/2026	11:00	Kivola Riemst D	KVC Lensonline Genk E	Riemst, Sporthal Op t Reeck	1 - 3	25/23, 17/25, 16/25, 23/25
+LDP4-D-0024	Zo	15/11/2026	18:30	Dievoc Diepenbeek E	Tamera Lummen D	Diepenbeek, Sporthal Demerstrand (nieuwe hal)	0 - 3	18/25, 12/25, 8/25
+LDP4-D-0035	Za	21/11/2026	18:30	Roveka Stevoort C	Dievoc Diepenbeek E	Spalbeek, Sporthal Spalbeek		
+LDP4-D-0017	Za	21/11/2026	18:00	Fit V.B.C. Ham A	Kovok Kortessem C	Kwaadmechelen, Sporthal t Vlietje		
+LDP4-D-0026	Zo	22/11/2026	11:45	Tamera Lummen D	Tesvoc Tessenderlo A	Lummen, Gem. sporthal De Vijfsprong		
+LDP4-D-0014	Zo	22/11/2026	12:00	Stalvoc Allimex Beverlo F	KVC Lensonline Genk E	Koersel, Sporthal Stalvoc		
+LDP4-D-0022	Za	28/11/2026	20:00	Kovok Kortessem C	KVC Davozon Zonhoven C	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0012	Za	28/11/2026	10:00	Tesvoc Tessenderlo A	Fit V.B.C. Ham A	Tessenderlo-Ham, Sporthal De Voordijcker		
+LDP4-D-0020	Zo	29/11/2026	12:30	KVC Lensonline Genk E	Dievoc Diepenbeek E	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0025	Zo	29/11/2026	12:00	Stalvoc Allimex Beverlo F	Roveka Stevoort C	Koersel, Sporthal Stalvoc		
+LDP4-D-0038	Zo	29/11/2026	11:00	Kivola Riemst D	Tamera Lummen D	Riemst, Sporthal Op t Reeck		
+LDP4-D-0005	Za	05/12/2026	16:00	Roveka Stevoort C	KVC Lensonline Genk E	Spalbeek, Sporthal Spalbeek		
+LDP4-D-0004	Za	05/12/2026	12:00	Tamera Lummen D	KVC Davozon Zonhoven C	Lummen, Gem. sporthal De Vijfsprong		
+LDP4-D-0036	Zo	06/12/2026	18:30	Dievoc Diepenbeek E	Tesvoc Tessenderlo A	Diepenbeek, Sporthal Demerstrand (nieuwe hal)		
+LDP4-D-0068	Za	12/12/2026	16:00	Fit V.B.C. Ham A	Kivola Riemst D	Kwaadmechelen, Sporthal t Vlietje		
+LDP4-D-0042	Za	19/12/2026	20:00	Fit V.B.C. Ham A	Tamera Lummen D	Kwaadmechelen, Sporthal t Vlietje		
+LDP4-D-0037	Ma	21/12/2026	20:00	Kovok Kortessem C	Stalvoc Allimex Beverlo F	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0081	Za	09/01/2027	16:00	KVC Lensonline Genk E	Fit V.B.C. Ham A	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0074	Zo	10/01/2027	16:30	Dievoc Diepenbeek E	Stalvoc Allimex Beverlo F	Diepenbeek, Sporthal Demerstrand (nieuwe hal)		
+LDP4-D-0065	Zo	10/01/2027	16:30	Roveka Stevoort C	Kivola Riemst D	Spalbeek, Sporthal Spalbeek		
+LDP4-D-0067	Zo	10/01/2027	16:00	KVC Davozon Zonhoven C	Kovok Kortessem C	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0050	Za	16/01/2027	16:00	KVC Lensonline Genk E	Roveka Stevoort C	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0087	Za	16/01/2027	20:00	Kovok Kortessem C	Dievoc Diepenbeek E	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0071	Zo	17/01/2027	11:00	Kivola Riemst D	KVC Davozon Zonhoven C	Riemst, Sporthal Op t Reeck		
+LDP4-D-0064	Zo	17/01/2027	12:00	Stalvoc Allimex Beverlo F	Tamera Lummen D	Koersel, Sporthal Stalvoc		
+LDP4-D-0054	Za	30/01/2027	17:00	KVC Davozon Zonhoven C	Stalvoc Allimex Beverlo F	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0078	Za	30/01/2027	16:00	KVC Lensonline Genk E	Kivola Riemst D	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0070	Za	30/01/2027	09:30	Tamera Lummen D	Dievoc Diepenbeek E	Lummen, Gem. sporthal De Vijfsprong		
+LDP4-D-0075	Za	30/01/2027	18:30	Roveka Stevoort C	Fit V.B.C. Ham A	Spalbeek, Sporthal Spalbeek		
+LDP4-D-0046	Za	30/01/2027	20:00	Kovok Kortessem C	Tesvoc Tessenderlo A	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0028	Zo	31/01/2027	14:00	KVC Davozon Zonhoven C	Kivola Riemst D	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0085	Za	06/02/2027	17:00	KVC Davozon Zonhoven C	Roveka Stevoort C	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0089	Za	06/02/2027	12:00	Tamera Lummen D	Fit V.B.C. Ham A	Lummen, Gem. sporthal De Vijfsprong		
+LDP4-D-0052	Zo	07/02/2027	11:00	Kivola Riemst D	Tesvoc Tessenderlo A	Riemst, Sporthal Op t Reeck		
+LDP4-D-0083	Zo	07/02/2027	12:00	Stalvoc Allimex Beverlo F	Kovok Kortessem C	Koersel, Sporthal Stalvoc		
+LDP4-D-0063	Zo	07/02/2027	18:30	Dievoc Diepenbeek E	KVC Lensonline Genk E	Diepenbeek, Sporthal Demerstrand (nieuwe hal)		
+LDP4-D-0084	Za	20/02/2027	10:00	Tesvoc Tessenderlo A	Dievoc Diepenbeek E	Tessenderlo-Ham, Sporthal De Voordijcker		
+LDP4-D-0090	Za	20/02/2027	16:00	KVC Lensonline Genk E	KVC Davozon Zonhoven C	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0048	Zo	21/02/2027	12:00	Stalvoc Allimex Beverlo F	Fit V.B.C. Ham A	Koersel, Sporthal Stalvoc		
+LDP4-D-0057	Zo	21/02/2027	11:00	Kivola Riemst D	Kovok Kortessem C	Riemst, Sporthal Op t Reeck		
+LDP4-D-0058	Zo	21/02/2027	18:30	Roveka Stevoort C	Tamera Lummen D	Spalbeek, Sporthal Spalbeek		
+LDP4-D-0073	Za	27/02/2027	10:00	Tesvoc Tessenderlo A	Tamera Lummen D	Tessenderlo-Ham, Sporthal De Voordijcker		
+LDP4-D-0079	Za	06/03/2027	18:00	Fit V.B.C. Ham A	KVC Davozon Zonhoven C	Kwaadmechelen, Sporthal t Vlietje		
+LDP4-D-0066	Za	06/03/2027	10:00	Tesvoc Tessenderlo A	KVC Lensonline Genk E	Tessenderlo-Ham, Sporthal De Voordijcker		
+LDP4-D-0077	Zo	07/03/2027	12:00	Tamera Lummen D	Kovok Kortessem C	Lummen, Gem. sporthal De Vijfsprong		
+LDP4-D-0088	Zo	07/03/2027	12:00	Stalvoc Allimex Beverlo F	Kivola Riemst D	Koersel, Sporthal Stalvoc		
+LDP4-D-0080	Zo	07/03/2027	18:30	Dievoc Diepenbeek E	Roveka Stevoort C	Diepenbeek, Sporthal Demerstrand (nieuwe hal)		
+LDP4-D-0086	Za	13/03/2027	10:00	Tesvoc Tessenderlo A	Roveka Stevoort C	Tessenderlo-Ham, Sporthal De Voordijcker		
+LDP4-D-0047	Za	13/03/2027	17:00	KVC Davozon Zonhoven C	Tamera Lummen D	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0061	Za	13/03/2027	20:00	Kovok Kortessem C	Fit V.B.C. Ham A	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0059	Zo	14/03/2027	10:00	KVC Lensonline Genk E	Stalvoc Allimex Beverlo F	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0049	Zo	14/03/2027	11:00	Kivola Riemst D	Dievoc Diepenbeek E	Riemst, Sporthal Op t Reeck		
+LDP4-D-0051	Za	20/03/2027	20:00	Kovok Kortessem C	Roveka Stevoort C	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0055	Za	20/03/2027	14:30	KVC Lensonline Genk E	Tamera Lummen D	Genk, Sporthal KVC LensOnline Genk		
+LDP4-D-0060	Zo	21/03/2027	16:00	KVC Davozon Zonhoven C	Dievoc Diepenbeek E	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0076	Zo	21/03/2027	12:00	Stalvoc Allimex Beverlo F	Tesvoc Tessenderlo A	Koersel, Sporthal Stalvoc		
+LDP4-D-0082	Zo	11/04/2027	12:45	Tamera Lummen D	Kivola Riemst D	Lummen, Gem. sporthal De Vijfsprong		
+LDP4-D-0069	Za	17/04/2027	14:00	Roveka Stevoort C	Stalvoc Allimex Beverlo F	Spalbeek, Sporthal Spalbeek		
+LDP4-D-0062	Za	17/04/2027	17:00	KVC Davozon Zonhoven C	Tesvoc Tessenderlo A	Zonhoven, Sporthal Ter Donk		
+LDP4-D-0072	Za	17/04/2027	20:00	Kovok Kortessem C	KVC Lensonline Genk E	Kortessem, Sporthal De Weyer oude Hal 1		
+LDP4-D-0053	Zo	18/04/2027	16:30	Dievoc Diepenbeek E	Fit V.B.C. Ham A	Diepenbeek, Sporthal Demerstrand (nieuwe hal)		
 www.volleyscores.be
