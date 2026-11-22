@@ -1,6 +1,6 @@
 {
- "bijgewerkt": "2026-11-20T21:29:11.973Z",
- "gecontroleerd": "2026-11-20T21:29:11.973Z",
+ "bijgewerkt": "2026-11-22T13:45:59.000Z",
+ "gecontroleerd": "2026-11-22T13:45:59.000Z",
  "reeks": "Promo 4 Dames D",
  "code": "LDP4-D",
  "provincie": "Limburg",
@@ -9,57 +9,70 @@
   {
    "pos": "1",
    "ploeg": "Stalvoc Allimex Beverlo F",
-   "ptn": 17,
-   "wed": 6,
-   "gew30": 5,
+   "ptn": 20,
+   "wed": 7,
+   "gew30": 6,
    "gew32": 1,
    "verl30": 0,
    "verl32": 0,
-   "setsW": 18,
+   "setsW": 21,
    "setsV": 4,
    "forfaits": 0
   },
   {
    "pos": "2",
    "ploeg": "Tesvoc Tessenderlo A",
+   "ptn": 18,
+   "wed": 8,
+   "gew30": 5,
+   "gew32": 1,
+   "verl30": 1,
+   "verl32": 1,
+   "setsW": 21,
+   "setsV": 10,
+   "forfaits": 0
+  },
+  {
+   "pos": "3",
+   "ploeg": "Roveka Stevoort C",
    "ptn": 15,
    "wed": 7,
    "gew30": 4,
    "gew32": 1,
    "verl30": 1,
    "verl32": 1,
-   "setsW": 18,
+   "setsW": 17,
    "setsV": 9,
    "forfaits": 0
   },
   {
-   "pos": "3a",
+   "pos": "4",
    "ploeg": "Tamera Lummen D",
-   "ptn": 12,
-   "wed": 5,
-   "gew30": 3,
-   "gew32": 1,
-   "verl30": 0,
-   "verl32": 1,
-   "setsW": 14,
-   "setsV": 6,
-   "forfaits": 0
-  },
-  {
-   "pos": "3b",
-   "ploeg": "Roveka Stevoort C",
    "ptn": 12,
    "wed": 6,
    "gew30": 3,
    "gew32": 1,
    "verl30": 1,
    "verl32": 1,
-   "setsW": 14,
+   "setsW": 15,
    "setsV": 9,
    "forfaits": 0
   },
   {
-   "pos": "5a",
+   "pos": "5",
+   "ploeg": "Fit V.B.C. Ham A",
+   "ptn": 10,
+   "wed": 8,
+   "gew30": 3,
+   "gew32": 0,
+   "verl30": 4,
+   "verl32": 1,
+   "setsW": 11,
+   "setsV": 16,
+   "forfaits": 0
+  },
+  {
+   "pos": "6",
    "ploeg": "Kivola Riemst D",
    "ptn": 9,
    "wed": 7,
@@ -72,55 +85,42 @@
    "forfaits": 0
   },
   {
-   "pos": "5b",
-   "ploeg": "Fit V.B.C. Ham A",
-   "ptn": 9,
-   "wed": 7,
-   "gew30": 3,
-   "gew32": 0,
-   "verl30": 4,
-   "verl32": 0,
-   "setsW": 9,
-   "setsV": 13,
-   "forfaits": 0
-  },
-  {
-   "pos": "7a",
+   "pos": "7",
    "ploeg": "Kovok Kortessem C",
-   "ptn": 6,
-   "wed": 6,
+   "ptn": 8,
+   "wed": 7,
    "gew30": 1,
-   "gew32": 1,
+   "gew32": 2,
    "verl30": 3,
    "verl32": 1,
-   "setsW": 10,
-   "setsV": 14,
+   "setsW": 13,
+   "setsV": 16,
    "forfaits": 0
   },
   {
-   "pos": "7b",
+   "pos": "8",
    "ploeg": "Dievoc Diepenbeek E",
    "ptn": 6,
-   "wed": 6,
+   "wed": 7,
    "gew30": 1,
    "gew32": 1,
-   "verl30": 3,
+   "verl30": 4,
    "verl32": 1,
    "setsW": 8,
-   "setsV": 15,
+   "setsV": 18,
    "forfaits": 0
   },
   {
    "pos": "9",
    "ploeg": "KVC Lensonline Genk E",
    "ptn": 4,
-   "wed": 6,
+   "wed": 7,
    "gew30": 1,
    "gew32": 0,
-   "verl30": 4,
+   "verl30": 5,
    "verl32": 1,
    "setsW": 8,
-   "setsV": 16,
+   "setsV": 19,
    "forfaits": 0
   },
   {
@@ -696,10 +696,16 @@
    "thuis": "Fit V.B.C. Ham A",
    "uit": "Kovok Kortessem C",
    "sporthal": "Kwaadmechelen, Sporthal t Vlietje",
-   "thuisSets": null,
-   "uitSets": null,
+   "thuisSets": 2,
+   "uitSets": 3,
    "uitslagTekst": null,
-   "sets": []
+   "sets": [
+    "25/18",
+    "21/25",
+    "25/21",
+    "20/25",
+    "11/15"
+   ]
   },
   {
    "nr": "LDP4-D-0035",
@@ -709,10 +715,14 @@
    "thuis": "Roveka Stevoort C",
    "uit": "Dievoc Diepenbeek E",
    "sporthal": "Spalbeek, Sporthal Spalbeek",
-   "thuisSets": null,
-   "uitSets": null,
+   "thuisSets": 3,
+   "uitSets": 0,
    "uitslagTekst": null,
-   "sets": []
+   "sets": [
+    "25/10",
+    "25/9",
+    "25/10"
+   ]
   },
   {
    "nr": "LDP4-D-0026",
@@ -722,10 +732,15 @@
    "thuis": "Tamera Lummen D",
    "uit": "Tesvoc Tessenderlo A",
    "sporthal": "Lummen, Gem. sporthal De Vijfsprong",
-   "thuisSets": null,
-   "uitSets": null,
+   "thuisSets": 1,
+   "uitSets": 3,
    "uitslagTekst": null,
-   "sets": []
+   "sets": [
+    "20/25",
+    "25/23",
+    "17/25",
+    "11/25"
+   ]
   },
   {
    "nr": "LDP4-D-0014",
@@ -735,10 +750,14 @@
    "thuis": "Stalvoc Allimex Beverlo F",
    "uit": "KVC Lensonline Genk E",
    "sporthal": "Koersel, Sporthal Stalvoc",
-   "thuisSets": null,
-   "uitSets": null,
+   "thuisSets": 3,
+   "uitSets": 0,
    "uitslagTekst": null,
-   "sets": []
+   "sets": [
+    "25/22",
+    "25/13",
+    "25/9"
+   ]
   },
   {
    "nr": "LDP4-D-0012",
